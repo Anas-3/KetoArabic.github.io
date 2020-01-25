@@ -182,7 +182,7 @@ button:focus {outline:0;}
                         <div class="hero-copy" >
                             <h2 class="hero-title h2-mobile mt-0 is-revealing" style="visibility: visible;">🔥ابدأ رحلة حرق الدهون</h2>
                             <p class="hero-paragraph is-revealing" style="visibility: visible;"> شارك آلاف المتابعين الذين يرغبون بتغيير حياتهم للأفضل</p>
-                            <p class="hero-cta is-revealing" style="visibility: visible;"><a class="button button-primary button-shadow" href="#more">تعرف على المزيد</a></p>
+                            <p id="showSider2" class="hero-cta is-revealing" style="visibility: visible;"><a id="showSider3" class="button button-primary button-shadow" href="#">تعرف على المزيد</a></p>
                         </div>
                         <div class="hero-illustration is-revealing" style="visibility: visible;">
                             <svg width="528" height="413" viewBox="0 0 528 413" xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +258,70 @@ button:focus {outline:0;}
                     </div>
                 </div>
             </section>
+			<section class="pricing section" >
+                <!-- <div class="section-square"></div> -->
+                <div class="container">
+                    <div class="pricing-inner section-inner has-top-divider" id="stores">
+                        <!-- <h2 class="section-title mt-0 text-center">احصل على الخطة من هنا  </h2> -->
+                        <div class="pricing-tables-wrap" >
+								<div class="pricing-table" style="direction: rtl;" >
+										<div class="pricing-table-inner" >
+											<div class="pricing-table-main">
+												<div class="pricing-table-header is-revealing" >
+														<div class="pricing-table-title mt-12 mb-8 h2" style="margin-top: -8px ;text-align: right; direction: rtl;">عرض لفترة محدودة</div>
+														<div class="pricing-table-title mt-12 mb-8" style="text-align: right; direction: rtl;">الخطة كاملا فقط بـ:</div>
+														<div id="" class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-currency h4">$</span><span class="pricing-table-price-amount h2">8.69</span></div>
+												</div>
+												<ul class="pricing-table-features list-reset text-xs mt-24 mb-56" >
+														<li class="is-revealing" >
+																<span class="list-icon">
+																	<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+																		<path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
+																	</svg>
+																</span>
+																<span>دفع محمي وآمن</span>
+															</li>
 
+													<li class="is-revealing">
+														<span class="list-icon">
+															<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+																<path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
+															</svg>
+														</span>
+														<span>لايتطلب التسجيل</span>
+													</li>
+													<li class="is-revealing">
+														<span class="list-icon">
+															<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+																<path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
+															</svg>
+														</span>
+														<span>شراء سريع  </span>
+													</li>
+													<li class="is-revealing">
+														<span class="list-icon">
+															<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+																<path fill="#5FFAD0" fill-rule="nonzero" d="M5.6 8.4L1.6 6 0 7.6 5.6 14 16 3.6 14.4 2z"/>
+															</svg>
+														</span>
+														<span>الحصول على الخطة فور الشراء </span>
+													</li>
+												</ul>
+											</div>
+											<div class="pricing-table-cta is-revealing">
+												<a class="button button-primary button-shadow button-block" style="font-size: 24px" id="gotostore" href="https://ketoarabic.onfastspring.com/" target="_blank"
+												>انقر هنا قبل انتهاء العرض!</a>
+											</div>
+										</div>
+									</div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+			</section>
             <section class="features section text-center">
                 <div class="section-square"></div>
                 <div class="container">
@@ -824,7 +887,7 @@ button:focus {outline:0;}
 												<div class="pricing-table-header is-revealing" >
 														<div class="pricing-table-title mt-12 mb-8 h2" style="margin-top: -8px ;text-align: right; direction: rtl;">عرض لفترة محدودة</div>
 														<div class="pricing-table-title mt-12 mb-8" style="text-align: right; direction: rtl;">الخطة كاملا فقط بـ:</div>
-														<div id="goBuy" class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-currency h4">$</span><span class="pricing-table-price-amount h2">3.99</span></div>
+														<div id="goBuy" class="pricing-table-price mb-32 pb-24"><span class="pricing-table-price-currency h4">$</span><span class="pricing-table-price-amount h2">8.69</span></div>
 												</div>
 												<ul class="pricing-table-features list-reset text-xs mt-24 mb-56" >
 														<li class="is-revealing" >
@@ -1025,9 +1088,19 @@ button:focus {outline:0;}
 	}
 
 	let btn = document.getElementById('showSider');
+	let btn2 = document.getElementById('showSider2');
 	let nav = document.getElementById('stickOnSide');
 	let arrL = document.getElementById('arrL');
 	let arrR = document.getElementById('arrR');
+
+	btn2.onclick = function(){
+		if(nav.classList.contains('show-sider'))
+			return;
+		nav.classList.add('show-sider');
+
+		arrR.style.display = 'block';
+		arrL.style.display = 'none';
+	}
 
 	btn.onclick = function(){
 		if(nav.classList.contains('show-sider'))
@@ -1044,10 +1117,16 @@ button:focus {outline:0;}
 		}
 	}
 
-	document.querySelector('.body-wrap').onclick = function(){
-		nav.classList.remove('show-sider');
+
+	document.querySelector('.body-wrap').onclick = function(e){
+		console.log(e.target);
+		if((e.target.id=='showSider2') || (e.target.id=="showSider3")) return;
+		else {
+			nav.classList.remove('show-sider');
 			arrL.style.display = 'block';
 			arrR.style.display = 'none';
+		}
+
 	}
 </script>
 
